@@ -1,0 +1,3 @@
+NET "c"   LOC = "P3";
+NET "c"   CLOCK_DEDICATED_ROUTE = FALSE;
+NET "Q"   LOC = "U18";

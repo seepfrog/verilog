@@ -1,0 +1,6 @@
+NET "a"    LOC = V16;
+NET "b"    LOC = V15;
+
+NET "y(2)" LOC = T8;
+NET "y(1)" LOC = N8;
+NET "y(0)" LOC = V8;

@@ -1,0 +1,6 @@
+net "a"   loc = "M8";
+net "b"   loc = "U8";
+net "Q(3)"   loc = "L14";
+net "Q(2)"   loc = "N14";
+net "Q(1)"   loc = "M14";
+net "Q(0)"   loc = "U18";

@@ -1,0 +1,7 @@
+NET "c0"     LOC = M8;
+NET "c1"     LOC = U8;
+
+NET "Q(3)"   LOC = L14;
+NET "Q(2)"   LOC = N14;
+NET "Q(1)"   LOC = M14;
+NET "Q(0)"   LOC = U18;
