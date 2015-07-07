@@ -5,8 +5,8 @@ module no_chat(
         output reg[3:0] Q
 );
       wire y0, y1;
-      assign y0 =~ (y1&a);
-      assign y1 =~ (y0&b);
+      assign y0 = ~(y1&a);
+      assign y1 = ~(y0&b);
 
       always @( posedge y1)begin
             Q[0] <= !Q[0];

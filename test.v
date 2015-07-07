@@ -6,13 +6,13 @@ module test(
 );
 
     assign led = c[26];
-    red[26:0] c = 0;
+    reg[26:0] c = 0;
 
     always @( posedge clk0)begin
-              if( c==27`d99999999)
+              if( c==27'd99999999)
                     c <= 0;
               else
-                    c <= c + 1`dl;
+                    c <= c + 1'dl;
     end
 
 endmodule

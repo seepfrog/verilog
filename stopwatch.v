@@ -9,18 +9,19 @@ module stopwatch(
       output wire[3:0] line
 );
       // 7seg LED pattern
-      parameter[6:0] seg_data[15:0]={
+      parameter[6:0] seg_data[0:15]={    //[15:0]
             7'b1111110, 7'b0110000, 7'b1101101, 7'b1111001,
             7'b0110011, 7'b1011011, 7'b1011111, 7'b1110010,
             7'b1111111, 7'b1111011, 7'b1110111, 7'b0011111,
             7'b1001110, 7'b0111101, 7'b1001111, 7'b1000111
       };
-      parameter MAX = 24'1_000_000; //10,000,000 count clk0 -> 0.1s
+      parameter MAX = 24'd1_000_000; //10,000,000 count clk0 -> 0.1s
 
       assign led = {reset_sw,start_sw};
-      reg[19:0] cc0=20'b0;
+      reg state = 1'b0;
+      reg[19:0] cc0=20'b0;  //[23:0] cc0 = 24'b0;
       reg[20:0] cc1=21'b0;
-      reg[3:0]  decisec=4'b0, sec1=4'b0, sec10=4b'0, sec100=4b'0;
+      reg[3:0]  decisec=4'b0, sec1=4'b0, sec10=4'b0, sec100=4'b0;
       wire enable_deci, enable_sec1, enable_sec10, enable_sec100;
 
       // 0.1sec enable signal generate
